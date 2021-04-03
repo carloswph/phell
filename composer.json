@@ -3,6 +3,7 @@
     "description": "A wrapper for obtaining information and deal with common tasks on Linux servers in data formats.",
     "type": "library",
     "license": "MIT",
+    "keywords": ["shell", "command line", "linux", "system utilities", "shell_exec", "shell commands"],
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
