@@ -1,0 +1,13 @@
+{
+    "name": "carloswph/phell",
+    "description": "A wrapper for obtaining information and deal with common tasks on Linux servers in data formats.",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+    	"psr-4": {
+    		"Phell\\": "src/"
+    	}
+    }
+}
