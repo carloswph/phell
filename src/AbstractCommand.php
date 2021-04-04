@@ -38,7 +38,7 @@ abstract class AbstractCommand
 	 * 
 	 * @since  1.0.0
 	 */
-	protected function process($shell) {}
+	abstract protected function process($shell);
 	/**
 	* Processed array getter.
 	*

@@ -102,72 +102,33 @@ array(10) {
     ["mounted_on"]=>
     string(9) "/run/lock"
   }
-  [5]=>
-  array(6) {
-    ["filesystem"]=>
-    string(5) "tmpfs"
-    ["blocks/size"]=>
-    string(4) "1.9G"
-    ["used"]=>
-    string(1) "0"
-    ["available"]=>
-    string(4) "1.9G"
-    ["use_percentage"]=>
-    string(2) "0%"
-    ["mounted_on"]=>
-    string(14) "/sys/fs/cgroup"
-  }
-  [6]=>
-  array(6) {
-    ["filesystem"]=>
-    string(9) "/dev/sda1"
-    ["blocks/size"]=>
-    string(4) "285M"
-    ["used"]=>
-    string(4) "7.9M"
-    ["available"]=>
-    string(4) "277M"
-    ["use_percentage"]=>
-    string(2) "3%"
-    ["mounted_on"]=>
-    string(9) "/boot/efi"
-  }
-  [7]=>
-  array(6) {
-    ["filesystem"]=>
-    string(5) "tmpfs"
-    ["blocks/size"]=>
-    string(4) "382M"
-    ["used"]=>
-    string(3) "44K"
-    ["available"]=>
-    string(4) "382M"
-    ["use_percentage"]=>
-    string(2) "1%"
-    ["mounted_on"]=>
-    string(14) "/run/user/1000"
-  }
-  [8]=>
-  array(6) {
-    ["filesystem"]=>
-    string(10) "/dev/loop0"
-    ["blocks/size"]=>
-    string(4) "100M"
-    ["used"]=>
-    string(4) "100M"
-    ["available"]=>
-    string(1) "0"
-    ["use_percentage"]=>
-    string(4) "100%"
-    ["mounted_on"]=>
-    string(16) "/snap/core/10908"
-  }
-  [9]=>
-  string(0) ""
+  [5]=> ... and so on...
 }
 
 */
+
 ```
+# Adding a new command
+
+Of course you can use the main abstract class to manage any other shell command and add new classes. For such, the only mandatory method will be process(), using the protected visibility, and the sole necessary property being $command, in which you will declare your new shell command, like this:
+
+```php
+namespace Phell;
+
+/**
+ * 
+ */
+class NewCommand extends AbstractCommand
+{
+	protected $command = 'newcommand';
+
+	protected function process($shell)
+	{
+		// Process and parsing
+	}
+}
+```
+Additionally, even though you can always find another way of processing additional parameters in your new command, we encourage you to use the enum class Params to do that - as some of the necessary parameters could be possibly around there yet.
 
 ## Commands available
 
