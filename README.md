@@ -2,7 +2,11 @@
 
 Linux system monitor utilities offer a comprehensive way of checking and monitoring any server. However, not everyone wants or is able to be checking the command line all times. Also, as those commands use to return unformatted strings, it becomes challenging to process or store such data in a more friendly way.
 
-This wrapper offers classes to execute and retrieve common shell system commands and return data in a PHP-friendly way.
+This wrapper offers classes to execute and retrieve common shell system commands and return data in a PHP-friendly way. Available classes/commands:
+
+* df
+* free
+* lscpu
 
 # Installing
 
@@ -134,6 +138,6 @@ Additionally, even though you can always find another way of processing addition
 
 This package in a work in progress, so new commands will be added eventually. Keep checking the README file and updating the package to get access to all of them. 
 
-**Available commands:**  df, free
+**Available commands:**  df, free, lscpu
 
 **Underway:** iostat, vmstat, uptime, groups
