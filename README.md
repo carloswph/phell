@@ -7,6 +7,7 @@ This wrapper offers classes to execute and retrieve common shell system commands
 * df
 * free
 * lscpu
+* lsmem
 
 # Installing
 

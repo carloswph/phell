@@ -11,7 +11,7 @@ class Df extends AbstractCommand
 
 	protected function process($shell)
 	{
-		$shell = shell_exec("df -h");
+		//$shell = shell_exec("df -h");
 		$shell = explode("\n", $shell);
 		
 		$colNames = [
