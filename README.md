@@ -8,6 +8,7 @@ This wrapper offers classes to execute and retrieve common shell system commands
 * free
 * lscpu
 * lsmem
+* vmstat (no arguments)
 
 # Installing
 
@@ -139,6 +140,6 @@ Additionally, even though you can always find another way of processing addition
 
 This package in a work in progress, so new commands will be added eventually. Keep checking the README file and updating the package to get access to all of them. 
 
-**Available commands:**  df, free, lscpu
+**Available commands:**  df, free, lscpu, lsmem, vmstat
 
-**Underway:** iostat, vmstat, uptime, groups
+**Underway:** iostat, uptime, groups
