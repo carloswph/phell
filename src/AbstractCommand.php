@@ -9,7 +9,7 @@ namespace Phell;
  * @since  1.0.0
  * @author  WP Helpers | Carlos Matos
  */
-abstract class AbstractCommand
+abstract class AbstractCommand implements \Countable
 {
 	protected $command;
 
@@ -48,5 +48,10 @@ abstract class AbstractCommand
 	public function get()
 	{
 		return $this->data;
+	}
+
+	public function count()
+	{
+		return count($this->data);
 	}
 }

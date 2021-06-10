@@ -11,4 +11,5 @@ class Params
 	const IN_MB = ' --mega';
 	const IN_GB = ' --giga';
 	const IN_TB = ' --tera';
+	const RECURSIVE = ' -R';
 }

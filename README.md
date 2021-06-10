@@ -5,6 +5,7 @@ Linux system monitor utilities offer a comprehensive way of checking and monitor
 This wrapper offers classes to execute and retrieve common shell system commands and return data in a PHP-friendly way. Available classes/commands:
 
 * df
+* man
 * free
 * lscpu
 * lsmem
@@ -114,6 +115,23 @@ array(10) {
 */
 
 ```
+# Using 'man' command
+
+Using the command 'man' is somewhat different than using all the others. As per getting a response, one must provide the bash command for which the manual is required. So, while instantiating the class, you must pass the bash command as parameter.
+
+```php
+use Phell\Man;
+use Phell\Params;
+
+require __DIR__ . '/vendor/autoload.php';
+
+
+$cpu = new Man('dir');
+echo $cpu->toHtml(); // Generate the response in readable HTML
+var_dump($cpu->get()); // Regular response in JSON
+var_dump($cpu->toArray()); // Parsed response in PHP array, in which subtitles of the manual are keys
+```
+
 # Adding a new command
 
 Of course you can use the main abstract class to manage any other shell command and add new classes. For such, the only mandatory method will be process(), using the protected visibility, and the sole necessary property being $command, in which you will declare your new shell command, like this:
